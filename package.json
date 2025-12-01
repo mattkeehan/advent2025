@@ -1,0 +1,14 @@
+{
+  "name": "advent2025",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "day1:q1:test": "node day1/q1.js day1/testinput.txt",
+    "day1:q1:full": "node day1/q1.js day1/input.txt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

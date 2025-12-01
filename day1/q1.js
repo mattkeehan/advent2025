@@ -1,0 +1,45 @@
+const fs = require('node:fs');
+
+const state = {
+    dialPosition: 50,
+    zeroCount: 0
+};
+
+const inputFilePath = process.argv[2] || './testinput.txt';
+
+const getDirection = (instruction) => instruction[0];
+const getDistance = (instruction) => Number.parseInt(instruction.slice(1), 10);
+
+const loadInstructionsFromFile = (filePath) => {
+    const data = fs.readFileSync(filePath, 'utf8');
+    return data.split('\n')
+        .map(instruction => instruction.trim())
+        .filter(instruction => instruction.length > 0);
+};
+
+const updateDial = (dir, dist) => {
+    if (dir === 'L') {
+        state.dialPosition -= dist;
+    } else {
+        state.dialPosition += dist;
+    }
+    
+    // keep it between 0-99
+    state.dialPosition = ((state.dialPosition % 100) + 100) % 100;
+    
+    if (state.dialPosition === 0) {
+        state.zeroCount += 1;
+    }
+};
+
+const instructions = loadInstructionsFromFile(inputFilePath);
+
+for (const instruction of instructions) {
+    const dir = getDirection(instruction);
+    const dist = getDistance(instruction);
+    updateDial(dir, dist);
+
+}
+
+console.log(`Zero Count: ${state.zeroCount}`);
+
