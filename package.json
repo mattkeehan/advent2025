@@ -7,7 +7,11 @@
     "day1:q1:test": "node day1/q1.js day1/testinput.txt",
     "day1:q1:full": "node day1/q1.js day1/input.txt",
     "day1:q2:test": "node day1/q2.js day1/testinput.txt",
-    "day1:q2:full": "node day1/q2.js day1/input.txt"
+    "day1:q2:full": "node day1/q2.js day1/input.txt",
+    "day2:q1:test": "node day2/q1.js day2/testinput.txt",
+    "day2:q1:full": "node day2/q1.js day2/input.txt",
+    "day2:q2:test": "node day2/q2.js day2/testinput.txt",
+    "day2:q2:full": "node day2/q2.js day2/input.txt"
   },
   "keywords": [],
   "author": "",
