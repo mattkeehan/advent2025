@@ -1,11 +1,4 @@
-const fs = require('node:fs');
-
-const inputFilePath = process.argv[2] || './testinput.txt';
-
-const loadDataFromFile = (filePath) => {
-    const data = fs.readFileSync(filePath, 'utf8');
-    return data.split(',');
-}
+const { inputFilePath, loadDataFromFile } = require('../util/fileLoader');
 
 const splitInHalf = (str) => {
     const mid = Math.floor(str.length / 2);
@@ -26,7 +19,8 @@ const getMatchesForData = (data) => {
     return res;
 }
 
-const count = loadDataFromFile(inputFilePath).reduce((acc, d) => { 
+const data = loadDataFromFile(inputFilePath).split(',');
+const count = data.reduce((acc, d) => { 
     return acc + getMatchesForData(d);
 }, 0);
 
