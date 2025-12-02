@@ -13,9 +13,9 @@ const splitInHalf = (str) => {
 };
 
 const getMatchesForData = (data) => {
-    const [start, end ] = data.split('-');
+    const [start, end ] = data.split('-').map(Number);
     let res = 0;
-    for (let i = Number.parseInt(start, 10); i <= Number.parseInt(end, 10); i++) {
+    for (let i = start; i <= end; i++) {
         if (String(i).length % 2 === 0) {
             const halves = splitInHalf(i.toString());
             if (halves[0] === halves[1]) {
