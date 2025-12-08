@@ -23,7 +23,11 @@
     "day5:q1:test": "node day5/q1.js day5/testinput.txt",
     "day5:q1:full": "node day5/q1.js day5/input.txt",
     "day5:q2:test": "node day5/q2.js day5/testinput.txt",
-    "day5:q2:full": "node day5/q2.js day5/input.txt"
+    "day5:q2:full": "node day5/q2.js day5/input.txt",
+    "day6:q1:test": "node day6/q1.js day6/testinput.txt",
+    "day6:q1:full": "node day6/q1.js day6/input.txt",
+    "day6:q2:test": "node day6/q2.js day6/testinput.txt",
+    "day6:q2:full": "node day6/q2.js day6/input.txt"
   },
   "keywords": [],
   "author": "",
